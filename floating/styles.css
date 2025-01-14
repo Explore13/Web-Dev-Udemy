@@ -1,0 +1,267 @@
+/* Add your website styles here */
+/* 
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f7fafc;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+.floating-button img{
+height: 30px;
+}
+
+.floating-button:hover {
+    background-color: #9f4ae9;
+} */
+
+/* Font Awesome Icons (You'll need to include Font Awesome in your project) */
+/* .fa-question {
+    margin-bottom: 5px;
+} */
+
+
+
+
+/* Add your website styles here */
+
+.container {
+    position: relative;
+}
+
+.floating-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #f7fafc;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    z-index: 1;
+}
+
+.floating-button:hover {
+    background-color: #5bd13b;
+}
+
+.card {
+    position: absolute;
+    bottom: 40px; /*Initially hidden below the page*/
+    right: -600px;
+    /* right:55px; */
+    /* width: 400px; */
+    background-color: #fff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-radius: 5px;
+    transition: transform 0.3s ease, right 0.3s ease;
+    z-index: 2;
+}
+
+.card-header {
+    background-color: rgb(83, 36, 200);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+    padding: 10px;
+
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.card-header i{
+    color: white;
+    font-size: 25px;
+    padding: 10px;
+
+}
+.card-body {
+    padding: 20px;
+}
+
+.translate_btn{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    height: 30px;
+    background-color: #f3f4f4;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+
+}
+.option-button {
+    display: block;
+    background-color: transparent;
+    /* font-family: 'Abril Fatface', cursive; */
+    color:#070707;
+    border: none; 
+    cursor: pointer;
+
+}
+
+.translate_btn:hover {
+    color: #d74949;
+    box-shadow: 0px 0px 10px #E55604;
+}
+
+.floating-button img{
+    height: 30px;
+    }
+
+
+.card_container {
+        max-width: 400px;
+        margin-top: 0px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+        color:#E55604;  
+        border-radius: 10px;
+        box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+    }
+.symbols{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* height: 30px; */
+    padding-left:10px;
+    padding-right:10px;
+    margin-bottom: 0px;
+}
+
+textarea {
+    resize: none;
+    overflow: hidden;
+    grid-column: 1/span 1;
+    border-radius: 10px;
+    max-width: 100%;
+    max-height: 50px;
+    margin-top: 0px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-weight: bold;
+    border: none;
+    outline-color:#E55604;
+
+    border-color: #E55604;
+    /* box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3); */
+
+
+}
+.copy_icon{
+    position:relative;
+    top: -40px;
+    left: 150px;
+}
+.copy_icon a i{
+    color: #E55604;
+}
+
+.biDi_div{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+#biDiArrow {
+    /* transform: rotate(90deg); */
+    font-size: 15px;
+    text-align: center;
+    color: #070707;
+    padding: 0px;
+    border: 0px;
+    width: 50px;
+    height: 50px;
+    background-color: #fff;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 50%;
+    cursor: pointer;
+    font-weight: bold;
+
+}
+
+
+#biDiArrow:hover {
+    color:#E55604;    
+    box-shadow: 0px 0px 10px #E55604;
+}
+
+
+.card-footer{
+    background-color: #E55604;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    max-height: 35px;
+    padding: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    /* border-top-left-radius: 5px;
+    border-top-right-radius: 5px; */
+}
+.card-footer i{
+    color:#070707dc;
+    font-size: 25px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.camera-btn a{
+    position: relative;
+    background-color: white;
+    height: 70px;
+    width: 70px;
+    /* bottom: 0px; */
+    border-radius: 50% 50% 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.3);
+
+
+}
+@media (max-width: 286px) 
+{
+.card{
+    width: 150px;
+
+
+}
+}
+@media (min-width:287px) and (max-width: 380px) 
+{
+    .card{
+            width: 200px;
+
+
+    }
+}

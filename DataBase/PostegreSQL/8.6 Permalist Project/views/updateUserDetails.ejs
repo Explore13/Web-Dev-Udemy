@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <link rel="stylesheet" href="styles/main.css" />
+
+  <title>Manage Users</title>
+      <!-- add icon link -->
+   <link rel="icon" href="/assets/icons/user-check.png" type="image/x-icon">
+</head>
+    
+<body>
+    <a href="/"><button class="button-61" role="button">Home</button></a> 
+  <main>
+  <div class="box" id="heading">
+    <h1>
+    USERS
+    </h1>
+  </div>
+  <div class="box">
+
+    <% if (usersList.length === 0) { %>
+      <div class="noItem" id="addDataSection">
+
+        <p>No Users Available</p>
+      </div>
+
+      <% } else { %>
+        <% for(let user of usersList){%>
+          <div class="item">
+            <form action="/deleteUser" method="post">
+                <input type="checkbox" onchange="this.form.submit()" name="deleteUserId" value="<%= user.id %>">
+            </form>
+    
+            <p id="title<%=user.id%>">
+              <%= user.name %>
+            </p>
+    
+            <form class="edit" action="/editUser" method="post">
+              <input type="hidden" name="updatedUserId" value="<%= user.id %>">
+              <input id="input<%=user.id%>" type="text" name="updatedUserName" value="<%= user.name %>" autocomplete="off"
+                autofocus="true" hidden="true" />
+              <button id="done<%=user.id%>" class="edit" type="submit" hidden><img class="icon"
+                  src="/assets/icons/check-solid.svg" alt="tick image"></button>
+            </form>
+            <button id="edit<%=user.id%>" class="edit" onclick="handler('<%=user.id%>')"><img class="icon"
+                src="/assets/icons/pencil-solid.svg" alt="pencil image"></button>
+          </div>
+          <% } %>
+        <% } %>
+
+
+  </div>
+
+  <script>
+    function handler(id) {
+      document.getElementById("title" + id).setAttribute("hidden", true)
+      document.getElementById("edit" + id).setAttribute("hidden", true)
+      document.getElementById("done" + id).removeAttribute("hidden")
+      document.getElementById("input" + id).removeAttribute("hidden")
+    }
+    
+
+    
+
+  </script>
+</main>
+<footer>Copyright © Surya Ghosh (<%= new Date().getFullYear() %>)
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(255, 255, 255);
+}
+.title-clr{
+    font-size: 50px;
+    color: red;
+    font-family: cursive;
+}
+
+.margin-add{
+    margin: 50px;
+}

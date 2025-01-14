@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Dynamic Website</title>
+</head>
+<body>
+
+    <%- include("partials/header.ejs") %>
+
+<div class="HareHare">“Om Krishnaya Namaha“</div>
+
+<div class="mainContainer">
+    <div class="outsideContainer">
+        <div class="buttons">
+            <div class="card">
+                <a href="/chapter">Chapter</a>
+            </div>
+            <div class="card">
+                <a href="/random">Random</a>
+            </div>
+            <div class="card">
+                <a href="/images">Images</a>
+            </div>
+            <div class="card">
+                <a href="#download">Download</a>
+            </div>
+        </div>
+    </div>
+    <div class="outsideContainer">
+        <div class="dailyQuotes">
+            <div class="container">
+        
+                <h1><%= chapterName %></h1>
+                <p><%= chapterSummary %></p>
+        
+        
+            </div>
+        </div>
+    </div>
+
+</div>
+
+    <%- include("partials/footer.ejs") %>
+
+</body>
+</html>

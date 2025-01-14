@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <%- include("partials/header.ejs") %>
+
+    <div class="container">
+
+        <% if(locals.valuePassed) { %>
+
+        <h1><%= valuePassed.chapterName %></h1>
+        <p><%= valuePassed.chapterSummary %></p>
+
+        <% } %>
+
+    </div>
+
+    <%- include("partials/footer.ejs") %>
+
+</body>
+</html>
+
+
+
+

@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Caveat+Brush&family=Kanit:wght@300;700&family=Libre+Baskerville&family=Merriweather&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Righteous&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Russo+One&display=swap');
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    /* background-color: #9EC8B9; */
+
+}
+
+.container {
+    max-width: 500px;
+    text-align: center;
+    margin: 50px auto;
+    background-color: rgb(245, 210, 146);
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Add box shadow here */
+    border-radius: 5px;
+}
+
+header
+{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: center;
+    background-color: #617ea4;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add box shadow here */
+    /* border-radius: 5px; */
+}
+#imageLogo{
+    display: flex;
+    font-family: 'Abril Fatface', serif;
+
+}
+.mySection{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+footer{
+    
+    /* position: fixed; */
+    /* width: 100%; */
+    bottom: 0px;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    text-align: center;
+    color: white;
+    background-color: #090a0a;
+    padding: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* Add box shadow here */
+}
+
+#copyRight{
+    display: flex;
+}
+
+.socialMedia{
+    display: flex;
+    justify-content: space-around;
+}
+
+.HareHare{
+    margin-top: 10px;
+    display: flex;
+    font-family:cursive ;
+    font-size: large;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainContainer{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+    text-align: center;
+}
+
+.outsideContainer{
+    height: 600px;
+    display: flex;
+    flex: 1;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.buttons{
+    padding-left: 20px;
+    display: grid;
+    row-gap: 20px;
+    width: 500px;
+    column-gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+}
+
+.card{
+    background-color: #AFC8AD;
+    height: 100px;
+    width: 200px;
+    border-radius: 1px;
+    border-top-style: 1px solid;
+    border-right-style: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card:hover{
+    box-shadow: 2px 2px 35px 0 #000;
+}
+.card a{
+    text-decoration: none;
+    color: #080808;
+}
+.card a:hover{
+    color: green;
+}
+h1 {
+    color: #333;
+}
+
+p {
+    color: #555;
+}
+

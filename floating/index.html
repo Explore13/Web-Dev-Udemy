@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Your Website</title>
+</head>
+<body>
+    <div class="container">
+
+
+
+
+        <div class="floating-button" id="ask-button">
+            <div class="floating-button" id="ask-button">
+                <img src="trans_img-removebg-preview.png" alt="">
+        </div>
+
+
+
+        <div class="card" id="card">
+            <div class="card-header">
+                <h2>अनुबाद</h2>
+                <a href="#"><i class="bi bi-question-square"></i></a>
+            </div>
+
+
+
+
+            <div class="card-body">
+
+                <div class="card_container">
+                    <div class="symbols">
+                        <h2>English</h2>
+                        <div class="icons">
+                            <i style="color: #E55604; font-size: 20px;" class="bi bi-mic"></i>
+                            <i style="color: #E55604; font-size: 24px;" class="bi bi-volume-up"></i>
+                        </div>
+                    </div>
+                    <textarea id="autoAdjustTextarea" rows="1" cols="45" placeholder="Type your text here ..."></textarea>
+                    <span class="copy_icon"><i class="bi bi-copy"></i></span>
+                </div>
+                
+                
+                <div class="biDi_div">
+                 
+                        <button  id="biDiArrow"><i class="bi bi-arrow-down-up"></i></button>
+
+                        <div class="translate_btn">
+                            <i style="color: #070707;" class="bi bi-translate"></i>
+                            <button class="option-button">Translate</button>
+                        </div>
+                </div>
+
+
+
+                <div class="card_container">
+                    <div class="symbols">
+                        <h2>Hindi</h2>
+                        <div class="icons">
+                            <i style="color: #E55604; font-size: 20px;" class="bi bi-mic"></i>
+                            <i style="color: #E55604; font-size: 24px;" class="bi bi-volume-up"></i>
+                        </div>
+                    </div>
+                    <textarea id="autoAdjustTextarea" rows="2" cols="45" placeholder="Hindi text appear here ..."></textarea>
+                    <span class="copy_icon"><a href="#"><i class="bi bi-copy"></i></a></span>
+                </div>
+
+            </div>
+
+
+            <div class="card-footer">
+                <a href="#"><i style="color: white;font-size: 25px;" class="bi bi-house"></i></a>
+                <div class="camera-btn">
+                    <a href="#"><i style="font-size: 30px;" class="bi bi-camera"></i></a>
+                </div>
+                <a href="#"><i style="color: white; font-size: 25px; opacity: 0.5;" class="bi bi-clock-history"></i></a>
+            </div>
+        </div>
+        
+    </div>
+    
+
+<script>
+
+// Textarea adjust
+const textarea = document.getElementById('autoAdjustTextarea');
+
+// Function to adjust textarea height based on its content
+function adjustTextareaHeight() {
+    textarea.style.height = 'auto';
+    textarea.style.height = `${textarea.scrollHeight}px`;
+}
+
+// Listen for input events (e.g., typing, pasting)
+textarea.addEventListener('input', adjustTextareaHeight);
+
+// Initial adjustment (in case there's content on page load)
+adjustTextareaHeight();
+
+
+
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

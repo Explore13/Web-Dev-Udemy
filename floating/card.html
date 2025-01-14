@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>English to Hindi Translator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            color: #333;
+        }
+        label {
+            font-weight: bold;
+        }
+        input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        textarea {
+            width: 100%;
+            height: 150px;
+            padding: 10px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>English to Hindi Translator</h1>
+        <label for="englishText">Enter English Text:</label>
+        <input type="text" id="englishText" placeholder="Type English text...">
+        <button id="translateButton">Translate</button>
+        <label for="hindiText">Hindi Translation:</label>
+        <textarea id="hindiText" readonly></textarea>
+    </div>
+
+    <script>
+        document.getElementById("translateButton").addEventListener("click", function() {
+            const englishText = document.getElementById("englishText").value;
+            // You would use a translation API or function here
+            // For simplicity, let's assume a simple mapping for a few words
+            const translationMap = {
+                "hello": "नमस्ते",
+                "world": "दुनिया",
+            };
+            const translatedText = englishText.split(" ").map(word => translationMap[word] || word).join(" ");
+            document.getElementById("hindiText").value = translatedText;
+        });
+    </script>
+</body>
+</html>
